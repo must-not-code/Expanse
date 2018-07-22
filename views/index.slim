@@ -1,0 +1,199 @@
+html
+  head
+    meta charset='utf-8'
+    title Видеопродакшн Expanse
+    link href='/apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'
+    link href='/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'
+    link href='/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'
+    link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'
+    link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css'
+    link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
+    link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css'
+    link rel='stylesheet' href='css/main.css'
+    script src='https://code.jquery.com/jquery-3.3.1.min.js'
+    script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js'
+    script src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js'
+    script src='js/main.js'
+  body.text-white
+    .container-fluid.px-0.position-absolute
+      nav.navbar.navbar-expand.container
+        a.navbar-brand href='/'
+          img src='logo.png'
+        ul.navbar-nav.mx-auto
+          li.nav-item
+            a.nav-link.text-uppercase href='#about' Что мы делаем?
+          li.nav-item
+            a.nav-link.text-uppercase href='#more' Подробнее о студии
+          li.nav-item
+            a.nav-link.text-uppercase href='#contact' Как с нами связаться
+        span.navbar-text
+          i.fa.fa-phone.text-white>
+          a.text-white href='tel:+7 (977) 538-61-48' +7 (977) 538-61-48
+
+    video autoplay='' loop='' muted='' src='bg.mp4' type='video/mp4'
+    .video-content.text-center
+      h1.font-weight-bold Профессиональная студийная съемка
+      p.lead Превращаем кадры в живую историю
+      .buttons
+        a.btn.btn-outline-warning.btn-lg.text-uppercase.text-white href='#about'
+          i.fa.fa-angle-down>
+          | Узнать больше
+        span.mx-4 или
+        a.btn.btn-warning.btn-lg.text-uppercase href='#' data-target='#modal-form' data-toggle='modal' Связаться
+
+    #about.mt-1
+    .container.mt-5.text-center
+      h2 Если Вы считаете, что студийная съемка выглядит скучно и однообразно — Вы еще не работали с нами
+      p Мы умеем превращать плоские кадры в живую историю, от которой невозможно отвести взгляд!
+      hr.my-5
+
+    .container
+      .row.text-center
+        .col-md-3.col-6
+          img src='icons/tv.png'
+          p Съемки ТВ-программ
+        .col-md-3.col-6
+          img src='icons/blog.png'
+          p Съемки контента для блогеров
+        .col-md-3.col-6
+          img src='icons/promo.png'
+          p Съемки рекламных роликов
+        .col-md-3.col-6
+          img src='icons/teach.png'
+          p Обучающее видео
+        .col-md-3.col-6
+          img src='icons/corp.png'
+          p Корпоративное видео
+        .col-md-3.col-6
+          img src='icons/video.png'
+          p Видео-визитки
+        .col-md-3.col-6
+          img src='icons/lan.png'
+          p Проведение корпоративных LAN-турниров
+        .col-md-3.col-6
+          img src='icons/youtube.png'
+          p Создание контента для YouTube каналов
+        .col-12
+          img src='icons/webinar.png'
+          p Проведение вебинаров
+
+    .container-fluid.px-0
+      .second.mt-5.text-center.pt-5
+        h2 С удовольствием расскажем более подробно о нашей студии
+        p Закажите обратный звонок, чтобы получить консультацию профессионалов
+        a.btn.btn-warning.btn-lg.text-uppercase.mt-5 href='#' data-target='#modal-form' data-toggle='modal' Заказать звонок
+
+    #more
+    .container.mt-5.text-center
+      h2 А так выглядит наша студия
+      p Не на словах, а на деле
+      hr.my-5
+
+    .container.portfolio.mb-5
+      .row
+        .col-5
+          a data-fancybox='gallery' href='portfolio/1.jpg'
+            img src='portfolio/1.png'
+        .col-4.p-0.mb-0
+          .row.p-0.mb-0.justify-content-center
+            .col-6
+              a data-fancybox='gallery' href='portfolio/2.jpg'
+                img src='portfolio/2.png'
+            .col-6
+              a data-fancybox='gallery' href='portfolio/3.jpg'
+                img src='portfolio/3.png'
+            .col-6
+              a data-fancybox='gallery' href='portfolio/4.jpg'
+                img src='portfolio/4.png'
+            .col-6
+              a data-fancybox='gallery' href='portfolio/5.jpg'
+                img src='portfolio/5.png'
+        .col-3
+          a data-fancybox='gallery' href='portfolio/6.jpg'
+            img src='portfolio/6.png'
+      .row
+        .col-2
+          a data-fancybox='gallery' href='portfolio/7.jpg'
+            img src='portfolio/7.png'
+        .col-3
+          a data-fancybox='gallery' href='portfolio/8.jpg'
+            img src='portfolio/8.png'
+        .col-4
+          a data-fancybox='gallery' href='portfolio/9.jpg'
+            img src='portfolio/9.png'
+        .col-3
+          a data-fancybox='gallery' href='portfolio/10.jpg'
+            img src='portfolio/10.png'
+
+    .container-fluid.px-0
+      #embed.youtube.mb-5
+        iframe#youtube allowfullscreen='' frameborder='0' src='//www.youtube.com/embed/iegTolZbWrg?rel=0'
+      #film.film.mb-5.d-flex.justify-content-center.align-items-center
+        .text-center
+          i.fa.fa-play-circle-o.fa-5x.mb-5
+          h2 Посмотреть видео-тур
+
+    #contact
+    .container.contacts.py-5.mb-5
+      .text-center
+        h2 Контактная информация
+        p Можете связаться с нами по телефону в указанное время, либо воспользоваться формой обратной связи и мы Вам перезвоним
+        img src='arrow.png'
+      .container
+        .row
+          .col
+            .row
+              .col-1
+                p
+                  i.fa.fa-phone.mt-1
+              .col
+                p
+                  a.text-dark href='tel:+7 (977) 538-61-48' +7 (977) 538-61-48
+            .row
+              .col-1
+                p
+                  i.fa.fa-map-o.mt-1
+              .col
+                p г. Москва, ул. Смольная, д. 12
+            .row
+              .col-1
+                p
+                  i.fa.fa-calendar.mt-1
+              .col
+                p Eжедневно с 10:00 до 22:00
+          .col.text-center
+            p Форма обратной связи
+            .form#form
+              .error#error
+              form#contact action='/' method='post'
+                .field
+                  input#name name='name' required='' type='text' placeholder='Имя'
+                .field
+                  input#phone name='phone' type='tel' placeholder='Телефон'
+                .field
+                  input#email name='email' type='email' placeholder='Почта'
+                .field
+                  button.btn.text-white.text-uppercase type='submit' Свяжитесь со мной
+
+    .footer.d-flex.justify-content-center.align-items-center
+      = "Copyright © #{Time.now.year} Expanse. Все права защищены."
+
+    #modal-form.modal.fade aria-hidden='true' role='dialog' tabindex='-1'
+      .modal-dialog.modal-dialog-centered role='document'
+        .modal-content
+          .modal-header
+            button.close aria-label='Close' data-dismiss='modal' type='button'
+              span aria-hidden='true' &times;
+          .modal-body.text-center#modal-body
+            p.text-dark Просто оставьте контакт и мы Вам перезвоним
+            .form#modal-form
+              .error#modal-error
+              form#modal-contact action='/' method='post'
+                .field
+                  input#name name='name' required='' type='text' placeholder='Имя'
+                .field
+                  input#phone name='phone' type='tel' placeholder='Телефон'
+                .field
+                  input#email name='email' type='email' placeholder='Почта'
+                .field
+                  button.btn.text-white.text-uppercase type='submit' Свяжитесь со мной
