@@ -19,7 +19,7 @@ post '/' do
     begin
       RestClient.post(
         "https://api:#{ENV['EMAIL_API_KEY']}@api.mailgun.net/v3/#{ENV['EMAIL_DOMAIN']}/messages",
-        from: 'Bender Rodriguez <bot@expanse-studio.ru>',
+        from: 'Bender Rodriguez <bot@eterra-studio.ru>',
         to: ENV['EMAIL_DESTINATION'],
         subject: 'Аренда.Заявка',
         text: "Имя: #{params[:name]}\nТелефон: #{params[:phone]}\nПочта: #{params[:email]}"
