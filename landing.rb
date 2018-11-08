@@ -2,7 +2,7 @@
 
 require 'sinatra'
 require 'slim'
-require 'rest-client'
+require 'pony'
 require 'rack-google-analytics'
 
 use Rack::GoogleAnalytics, tracker: ENV['GA_CODE']
@@ -17,13 +17,22 @@ post '/' do
     body 'Укажите телефон или почту для связи!'
   else
     begin
-      RestClient.post(
-        "https://api:#{ENV['EMAIL_API_KEY']}@api.mailgun.net/v3/#{ENV['EMAIL_DOMAIN']}/messages",
-        from: 'Bender Rodriguez <bot@eterra-studio.ru>',
+      Pony.mail({
         to: ENV['EMAIL_DESTINATION'],
-        subject: 'Аренда.Заявка',
-        text: "Имя: #{params[:name]}\nТелефон: #{params[:phone]}\nПочта: #{params[:email]}"
-      )
+        from: 'Bender Rodriguez <bot@eterra-studio.ru>',
+        subject: 'Сообщение через форму на eterra-studio.ru',
+        body: "Имя: #{params[:name]}\nТелефон: #{params[:phone]}\nПочта: #{params[:email]}",
+        via: :smtp,
+        via_options: {
+          address: 'smtp.gmail.com',
+          port: '587',
+          enable_starttls_auto: true,
+          user_name: ENV['EMAIL_USERNAME'],
+          password: ENV['EMAIL_PASSWORD'],
+          authentication: :plain,
+          domain: 'eterra-studio.ru'
+        }
+      })
 
       status 200
       body 'Успешно отправлено!'

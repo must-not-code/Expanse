@@ -22,26 +22,23 @@ GEM
     builder (3.2.3)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
-    domain_name (0.5.20180417)
-      unf (>= 0.0.5, < 1.0.0)
     erubi (1.7.1)
-    http-cookie (1.0.3)
-      domain_name (~> 0.5)
     i18n (1.1.1)
       concurrent-ruby (~> 1.0)
     kgio (2.11.2)
     loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    mime-types (3.2.2)
-      mime-types-data (~> 3.2015)
-    mime-types-data (3.2018.0812)
+    mail (2.7.1)
+      mini_mime (>= 0.1.1)
+    mini_mime (1.0.1)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     mustermann (1.0.3)
-    netrc (0.11.0)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
+    pony (1.12)
+      mail (>= 2.0)
     rack (2.0.5)
     rack-google-analytics (1.2.0)
       actionpack
@@ -56,10 +53,6 @@ GEM
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
     raindrops (0.19.0)
-    rest-client (2.0.2)
-      http-cookie (>= 1.0.2, < 2.0)
-      mime-types (>= 1.16, < 4.0)
-      netrc (~> 0.8)
     sinatra (2.0.4)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -73,9 +66,6 @@ GEM
     tilt (2.0.8)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.7.5)
     unicorn (5.4.1)
       kgio (~> 2.6)
       raindrops (~> 0.7)
@@ -84,8 +74,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  pony
   rack-google-analytics
-  rest-client
   sinatra
   slim
   unicorn
