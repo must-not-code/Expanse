@@ -22,11 +22,28 @@ video {
   margin-top: -35%;
   left:50%;
   transform: translate(-50%,-50%);
+  width: 100%;
+}
+
+.video-content img {
+  margin-top: 60px;
+}
+
+.video-content h1 {
+  font-size: 3rem;
+}
+
+.video-content p {
+  font-size: 1.5rem;
 }
 
 @media (max-width: 1250px) {
   .video-content {
     margin-top: -25%;
+  }
+
+  .video-content img {
+    margin-top: 0px;
   }
 }
 
