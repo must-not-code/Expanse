@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
   $('#contact').submit(function(e) {
     e.preventDefault();
 
@@ -7,9 +7,9 @@ $(function() {
       url: $('#contact').attr('action'),
       data: $('#contact').serialize()
     })
-    .done(function(response) {
+    .done(function(data) {
       $('#form').empty();
-      $('#form').text(response);
+      $('#form').text(data);
     })
     .fail(function(data) {
       $('#error').text(data.responseText);
@@ -24,8 +24,8 @@ $(function() {
       url: $('#modal-contact').attr('action'),
       data: $('#modal-contact').serialize()
     })
-    .done(function(response) {
-      $('#modal-body').html('<h1 class="text-dark">' + response + '</h1>');
+    .done(function(data) {
+      $('#modal-body').html('<h1 class="text-dark">' + data + '</h1>');
     })
     .fail(function(data) {
       $('#modal-error').text(data.responseText);

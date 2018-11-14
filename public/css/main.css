@@ -190,3 +190,7 @@ iframe {
   margin: 0 auto;
   display: block;
 }
+
+.hp {
+  display: none;
+}
