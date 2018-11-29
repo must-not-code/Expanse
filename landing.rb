@@ -3,9 +3,6 @@
 require 'sinatra'
 require 'slim'
 require 'pony'
-require 'rack-google-analytics'
-
-use Rack::GoogleAnalytics, tracker: ENV['GA_CODE']
 
 get '/' do
   slim :index

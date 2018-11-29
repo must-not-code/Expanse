@@ -37,16 +37,6 @@ video {
   font-size: 1.5rem;
 }
 
-@media (max-width: 1250px) {
-  .video-content {
-    margin-top: -25%;
-  }
-
-  .video-content img {
-    margin-top: 0px;
-  }
-}
-
 .nav-link {
   color: #FFF !important;
   font-size: 12px;
@@ -60,6 +50,20 @@ video {
 
 .buttons {
   margin-top: 140px;
+}
+
+@media (max-width: 1250px) {
+  .video-content {
+    margin-top: -33%;
+  }
+
+  .video-content img {
+    margin-top: 0px;
+  }
+
+  .buttons {
+    margin-top: 50px;
+  }
 }
 
 hr {

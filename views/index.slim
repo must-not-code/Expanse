@@ -14,6 +14,7 @@ html
     script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js'
     script src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js'
     script src='js/main.js'
+    script src="https://www.googletagmanager.com/gtag/js?id=#{ENV['GA_CODE']}" async=''
   body.text-white
     .container-fluid.px-0.position-absolute
       nav.navbar.navbar-expand.container
@@ -213,3 +214,37 @@ html
                   input#email name='real_email' type='email' placeholder='Почта'
                 .field
                   button.btn.text-white.text-uppercase type='submit' Свяжитесь со мной
+
+javascript:
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', "#{ENV['GA_CODE']}");
+
+javascript:
+  (function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+      try {
+        w["yaCounter#{ENV['YANDEX_CODE']}"] = new Ya.Metrika2({
+          id: "#{ENV['YANDEX_CODE']}",
+          clickmap: true,
+          trackLinks: true,
+          accurateTrackBounce: true
+        });
+      } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName('script')[0],
+        s = d.createElement('script'),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = 'https://mc.yandex.ru/metrika/tag.js';
+
+    if (w.opera == '[object Opera]') {
+      d.addEventListener('DOMContentLoaded', f, false);
+    } else { f(); }
+  })(document, window, 'yandex_metrika_callbacks2');
+noscript
+  div
+    img alt='' src="https://mc.yandex.ru/watch/#{ENV['YANDEX_CODE']}" style='position:absolute; left:-9999px;'
